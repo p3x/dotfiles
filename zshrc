@@ -14,6 +14,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 
+# macOS only // map caps lock to escape
+source $ZSH/oh-my-capslock.sh
+
 
 export USER=cmercier
 export MAIL=cmercier@student.42.fr

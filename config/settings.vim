@@ -6,23 +6,18 @@
 "    By: cmercier <cmercier@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2019/04/10 16:24:32 by cmercier          #+#    #+#              "
-"    Updated: 2019/05/07 00:51:38 by cmercier         ###   ########.fr        "
+"    Updated: 2019/05/07 18:45:59 by cmercier         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 "-------------------------------------------------------------------------------
-"							GENERAL SETTINGS
+"								GENERAL SETTINGS
 "-------------------------------------------------------------------------------
-
-"let mapleader = " "
-
-filetype on
-filetype indent on
 filetype plugin on
 syntax on
 colorscheme xoria256
 set t_Co=256
-set nobackup                          " no *~ backup files
+set nobackup 					" no *~ backup files
 set noswapfile
 set nowritebackup
 
@@ -94,7 +89,7 @@ au FocusLost * :wa				"save all on losing focus
 "-------------------------------------------------------------------------------
 
 "open and source settings.vim
-nnoremap <silent> <leader>ev :vs ~/.vim/config/settings.vim<cr>
+nnoremap <silent> <leader>ev :sp ~/.vim/config/settings.vim<cr>
 nnoremap <silent> <leader>sv :so ~/.vim/config/settings.vim<cr>
 
 "use shift-H and shift-L for home/end
@@ -115,7 +110,7 @@ endfun
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap < <><left>
-
+inoremap { {<cr>}<esc>ka<cr>
 "TAB matches bracket pairs
 vnoremap <tab> %
 nnoremap <tab> %
@@ -195,7 +190,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
 
 "don't display these kinds of files
-let NERDTreeIgnore=[ '\.o$', '\.DS_Store']
+let NERDTreeIgnore=[ '\.gch', '\.swp', '\.o$', '\.DS_Store']
 
 "open on right side of window
 let NERDTreeWinPos = "right"
